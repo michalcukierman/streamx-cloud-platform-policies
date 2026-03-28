@@ -9,10 +9,16 @@ helm:
   values:
     admissionController:
       replicas: 3
-      image:
-        registry: ghcr.io
-        repository: kyverno/kyverno
-        tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
+      container:
+        image:
+          registry: ghcr.io
+          repository: kyverno/kyverno
+          tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
+      initContainer:
+        image:
+          registry: ghcr.io
+          repository: kyverno/kyvernopre
+          tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
 
     backgroundController:
       replicas: 2

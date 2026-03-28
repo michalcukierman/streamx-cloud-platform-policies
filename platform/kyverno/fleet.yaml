@@ -3,9 +3,13 @@ defaultNamespace: kyverno
 helm:
   repo: https://kyverno.github.io/kyverno/
   chart: kyverno
+  version: 3.7.1
   releaseName: kyverno
   waitForJobs: true
   values:
+    image:
+      repository: ghcr.io/kyverno/kyverno
+      tag: main
     admissionController:
       replicas: 3
     backgroundController:

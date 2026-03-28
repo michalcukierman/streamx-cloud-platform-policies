@@ -7,10 +7,10 @@ helm:
   releaseName: kyverno
   waitForJobs: true
   values:
-    image:
-      repository: ghcr.io/kyverno/kyverno
-      tag: 39dc3bce9ddde4457b590868ca934e8f6f6754f2
     admissionController:
+      image:
+        repository: ghcr.io/kyverno/kyverno
+        tag: 39dc3bce9ddde4457b590868ca934e8f6f6754f2
       replicas: 3
     backgroundController:
       replicas: 2

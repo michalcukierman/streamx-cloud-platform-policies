@@ -1,0 +1,16 @@
+defaultNamespace: kyverno
+
+helm:
+  repo: https://kyverno.github.io/kyverno/
+  chart: kyverno
+  releaseName: kyverno
+  waitForJobs: true
+  values:
+    admissionController:
+      replicas: 3
+    backgroundController:
+      replicas: 2
+    cleanupController:
+      replicas: 2
+    reportsController:
+      replicas: 2

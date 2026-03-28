@@ -8,13 +8,29 @@ helm:
   waitForJobs: true
   values:
     admissionController:
-      image:
-        repository: ghcr.io/kyverno/kyverno
-        tag: 39dc3bce9ddde4457b590868ca934e8f6f6754f2
       replicas: 3
+      image:
+        registry: ghcr.io
+        repository: kyverno/kyverno
+        tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
+
     backgroundController:
       replicas: 2
+      image:
+        registry: ghcr.io
+        repository: kyverno/background-controller
+        tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
+
     cleanupController:
       replicas: 2
+      image:
+        registry: ghcr.io
+        repository: kyverno/cleanup-controller
+        tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"
+
     reportsController:
       replicas: 2
+      image:
+        registry: ghcr.io
+        repository: kyverno/reports-controller
+        tag: "39dc3bce9ddde4457b590868ca934e8f6f6754f2"

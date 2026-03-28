@@ -8,7 +8,7 @@ helm:
   waitForJobs: true
   values:
     image:
-      repository: ghcr.io/kyverno/kyverno
+      repository: ghcr.io/kyverno/kyverno:39dc3bce9ddde4457b590868ca934e8f6f6754f2
       tag: main
     admissionController:
       replicas: 3
